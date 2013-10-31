@@ -7,6 +7,8 @@ Author: Matthew Mesaros (mesaros.creative@gmail.com)
 ----------------------------------------------- */
 * {
 	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
@@ -90,16 +92,16 @@ body {
     font-size: 100%;
     height: 100%;
     line-height: 1.45;
-    overflow-y: hidden;
+    overflow: hidden;
     width: 100%;
 }
 
 #container {
     display: block;
     height: 100vh;
-    left: 0;
+    left: 180px;
     position: relative;
-    width: 400%;
+    width: calc(400% - 720px);
 }
 
 .wrapper {
@@ -113,6 +115,7 @@ section {
     display: block;
     float: left;
     height: 100vh;
+    position: relative;
     text-align: center;
 }
 
@@ -130,7 +133,8 @@ section p {
 }
 
 h3 {
-    color: 333;
+    color: #FFF;
+    font-family: 'quicksand-regular';
     font-size: 1.5em;
     font-weight: 100;
     letter-spacing: 1px;
@@ -153,54 +157,49 @@ h3::before, h3::after {
 /* =NAVIGATION
 ----------------------------------------------- */
 header {
-    height: 110px;
-    position: fixed;
-    width: 100%;
-}
-
-#navMain {
+    background: rgba(32,32,32,0.99);
     height: 100%;
-    margin: 0 auto;
-    width: 62em;
+    left: 0;
+    padding-top: 20px;
+    position: fixed;
+    width: 180px;
+    z-index: 1000;
 }
 
 #navMain ul {
-    margin-top: 40px;
+    margin-top: 0px;
+    width: 100%;
 }
 
 #navMain ul li {
-    display: inline;
-    margin-right: 40px;
-}
-
-#navMain ul li:last-child {
-    margin-right: 0;
+    display: block;
 }
 
 #navMain ul li a {
+    display: block;
     font-family: 'quicksand-regular';
-    font-size: 1.5em;
+    font-size: 1em;
+    padding: 10px 0 10px 20px;
     text-transform: uppercase;
 }
 
-.navLeft {
-    float: left;
+#navMain ul li a:hover {
+    background: #FFF;
+    color: #202020;
 }
 
-.navRight {
-    float: right;
+.current {
+    background: #FFF;
+    color: #202020 !important;
 }
 
 #branding {
-    background: rgba(193,86,59,0.8);
-    border-radius: 360px;
-    display: inline-block;
-    height: 150px;
-    left: calc(50% - 93px/2);
-    padding: 20px 10px;
+    bottom: 20px;
+    height: 60px;
+    padding-left: 20px;
     position: absolute;
     text-align: center;
-    width: 150px;
+    width: 60px;
 }
 
 /* =HOME SECTION
