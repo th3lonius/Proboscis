@@ -79,6 +79,10 @@ a:hover {
     font-family: 'quicksand-light';
     src: url('../assets/fonts/Quicksand-Light.otf');
 }
+@font-face {
+    font-family: 'quicksand-regular';
+    src: url('../assets/fonts/Quicksand-Regular.otf');
+}
 
 body {
     color: #333;
@@ -113,7 +117,7 @@ section {
 }
 
 section article {
-    margin-top: 200px;
+    margin-top: 100px;
     padding: 20px;
     text-align: left;
 }
@@ -174,7 +178,7 @@ header {
 }
 
 #navMain ul li a {
-    font-family: 'quicksand-light';
+    font-family: 'quicksand-regular';
     font-size: 1.5em;
     text-transform: uppercase;
 }
@@ -188,13 +192,15 @@ header {
 }
 
 #branding {
-    background: url(../img/monkey_branding.svg);
+    background: rgba(193,86,59,0.8);
+    border-radius: 360px;
     display: inline-block;
-    height: 114px;
+    height: 150px;
     left: calc(50% - 93px/2);
+    padding: 20px 10px;
     position: absolute;
-    width: 93px;
-    -webkit-transform: scale(0.8);
+    text-align: center;
+    width: 150px;
 }
 
 /* =HOME SECTION
@@ -214,6 +220,7 @@ header {
 #hdOverlay {
     background: rgba(193,86,59,0.2);
     height: 100vh;
+    margin-top: -100px;
 }
 
 /* =SPLASHTYPE
