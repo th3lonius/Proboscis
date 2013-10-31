@@ -2,6 +2,23 @@ $(document).ready(function() {
     
     $('#splashType').bigtext();
     
+
+    // Check for hash value in URL
+        var hash = window.location.hash.substr(1);
+        var href = $('nav ul li a').each(function(){
+        var href = $(this).attr('href');
+    });
+    
+    $('nav ul li a').click(function(event){
+        
+        if (!$(this).hasClass("current")) {
+            $("nav a").removeClass("current");
+            $(this).addClass("current");
+        }
+        
+    })
+
+    
 /*----- SCROLLING MENU -----*/
 
     function fade_header() {
@@ -40,7 +57,7 @@ $(document).ready(function() {
     });
     
     function sectionFit() {
-        var sectionWidth = $(window).width();
+        var sectionWidth = $(window).width() - 180;
         $('section').css('width',sectionWidth);
     }
     
