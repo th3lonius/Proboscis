@@ -10,7 +10,7 @@
             $("html,body").animate({
                 scrollLeft: destination
             }, 1200);
-
+            
         }
 
         if (typeof $().on == "function") {
@@ -57,8 +57,7 @@
                         // fine, we'll just follow the original link. gosh.
                         window.location = href;
                     }
-                }
-                else {
+                } else {
                     scrollBodyTo($(href).offset().left, href);
                 }
                 return false;

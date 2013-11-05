@@ -1,22 +1,19 @@
 $(document).ready(function() {
     
     $('#splashType').bigtext();
+    $('#slides').superslides();
     
+    if (!location.hash) {
+        $('nav ul li a:first').addClass('active');
+    } else {
+        $('nav ul li a[href=' + location.hash + ']').addClass('active');
+    }
 
-    // Check for hash value in URL
-        var hash = window.location.hash.substr(1);
-        var href = $('nav ul li a').each(function(){
-        var href = $(this).attr('href');
+    $('nav ul li a').bind('click', function(event) {
+        $('nav ul li a').removeClass('active');
+        $(this).addClass('active');
     });
-    
-    $('nav ul li a').click(function(event){
-        
-        if (!$(this).hasClass("current")) {
-            $("nav a").removeClass("current");
-            $(this).addClass("current");
-        }
-        
-    })
+
 
     
 /*----- SCROLLING MENU -----*/
