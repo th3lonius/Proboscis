@@ -54,14 +54,7 @@ img { max-width: 100%; }
 
 /* =LINKS
 ----------------------------------------------- */
-a:link, a:visited {
-    color: #FFF;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #FFF;
-}
+a:link, a:visited { text-decoration: none; }
 
 /* =GLOBAL
 ----------------------------------------------- */
@@ -99,9 +92,8 @@ body {
 #container {
     display: block;
     height: 100vh;
-    left: 180px;
     position: relative;
-    width: calc(400% - 720px);
+    width: 400%;
 }
 
 .wrapper {
@@ -117,11 +109,18 @@ section {
     height: 100vh;
     position: relative;
     text-align: center;
+    width: 100vw;
 }
 
 section article {
-    padding: 20px 100px;
+    background: #FFF;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 3em;
+    position: absolute;
+    right: 4%;
     text-align: left;
+    width: 30%;
 }
 
 section p {
@@ -157,8 +156,7 @@ h3::before, h3::after {
 ----------------------------------------------- */
 header {
     background: rgba(32,32,32,0.99);
-    height: 100%;
-    left: 0;
+    left: 4%;
     padding-top: 20px;
     position: fixed;
     width: 180px;
@@ -175,6 +173,7 @@ header {
 }
 
 #navMain ul li a {
+    color: #FFF;
     display: block;
     font-family: 'quicksand-regular';
     font-size: 1em;
@@ -193,22 +192,21 @@ header {
 }
 
 #branding {
-    bottom: 20px;
-    height: 60px;
-    padding-left: 20px;
-    position: absolute;
+    margin: 0 auto;
+    padding-bottom: 0.5em;
+    position: relative;
     text-align: center;
-    width: 60px;
 }
 
 .prev, .next {
+    background: rgba(20,20,20,0.3);
     cursor: pointer;
     display: block;
     font-size: 10em;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     text-align: center;
-    width: 6%;
+    width: 4%;
     z-index: 10000;
     -webkit-transition: all linear 0.5s;
 }
@@ -220,9 +218,12 @@ header {
 
 .next { right: 0; }
 
-.prev:hover, .next:hover { background: rgba(20,20,20,0.2); }
+.prev:hover, .next:hover { background: rgba(20,20,20,0.6); }
 
-.prev img, .next img { margin-top: calc(979px/2 - 148px); }
+.prev img, .next img {
+    margin-top: calc(100%);
+    width: 70%;
+}
 
 .prev img {
     -webkit-transform: rotate(180deg);
@@ -235,6 +236,10 @@ header {
 #home {
     background: url(../img/proboscis.jpg) no-repeat 0 0 transparent;
     background-size: cover;
+}
+
+#home article {
+    padding: 20px 100px 20px calc(180px + 8%);
 }
 
 #hdOverlay {
@@ -277,13 +282,23 @@ header {
 /* =ABOUT
 ----------------------------------------------- */
 #about {
-    background: #FFF;
+    background: url(../assets/unaltered/proboscis_group.jpg);
+    background-size: cover;
+}
+
+#about article {
+
+}
+
+#about a {
+    font-weight: bold;
 }
 
 /* =PRECAUTIONS
 ----------------------------------------------- */
 #precautions {
-    background: yellow;
+    background: url(../assets/unaltered/shnauz.jpg);
+    background-size: contain;
 }
 
 /* =SOLUTIONS
