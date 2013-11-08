@@ -1,7 +1,10 @@
 $(document).ready(function() {
     
+
+    
     $('#splashType').bigtext()
     
+/*----- NAVIGATION -----*/
     
     if (!location.hash) {
         $('nav ul li a:first').addClass('active');
@@ -14,8 +17,13 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
-    
 
+    $('#profile li a').bind('click', function(event) {
+        $(this).toggleClass('current');
+        $(this).next().slideToggle();
+        return false;
+    });
+    
     
     $('.next').click(function(event) {
         
@@ -29,7 +37,7 @@ $(document).ready(function() {
         $("html,body").animate({
             scrollLeft: dest
         }, 1200);
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 <<<<<<< HEAD
         
 =======
@@ -37,7 +45,7 @@ $(document).ready(function() {
 >>>>>>> 62ab416930bf975f9b4b3a8241b5c487be70a5c9
 =======
                 
->>>>>>> 62ab416930bf975f9b4b3a8241b5c487be70a5c9
+>>>>>>> 62ab416930bf975f9b4b3a8241b5c487be70a5c9*/
         return false;
     });
 
