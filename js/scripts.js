@@ -28,8 +28,6 @@ $(document).ready(function() {
             scrollLeft: dest
         }, 1200);
         
-        location.hash = 
-        
         return false;
     });
 
