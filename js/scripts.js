@@ -19,15 +19,21 @@ $(document).ready(function() {
     
     $('.next').click(function(event) {
         
-        var dest = $('section'+location.hash).next().offset().left - 180;
-                
+        var currentSection = $('section'+location.hash);
+        
+        var dest = $(currentSection).next().offset().left;
+                        
         console.log(dest);
         console.log(location.hash);
         
         $("html,body").animate({
             scrollLeft: dest
         }, 1200);
+<<<<<<< HEAD
         
+=======
+                
+>>>>>>> 62ab416930bf975f9b4b3a8241b5c487be70a5c9
         return false;
     });
 
@@ -73,7 +79,7 @@ $(document).ready(function() {
     });
     
     function sectionFit() {
-        var sectionWidth = $(window).width() - 180;
+        var sectionWidth = $(window).width();
         $('section').css('width',sectionWidth);
     }
     

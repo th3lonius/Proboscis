@@ -34,7 +34,7 @@
                     }
                 }
                 else {
-                    scrollBodyTo($(href).offset().left - 180, href);
+                    scrollBodyTo($(href).offset().left, href);
                 }
                 return false;
             });
