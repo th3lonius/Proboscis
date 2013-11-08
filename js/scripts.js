@@ -30,7 +30,11 @@ $(document).ready(function() {
             scrollLeft: dest
         }, 1200);
 <<<<<<< HEAD
+<<<<<<< HEAD
         
+=======
+                
+>>>>>>> 62ab416930bf975f9b4b3a8241b5c487be70a5c9
 =======
                 
 >>>>>>> 62ab416930bf975f9b4b3a8241b5c487be70a5c9
