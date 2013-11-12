@@ -57,17 +57,19 @@ $(document).ready(function() {
 
     function fade_header() {
     
-		if ($(window).width() >= 720) {
+		if ($(window).width() > 720) {
 
-			winScroll = $(this).scrollTop();
+			winScroll = $('#about article').scrollTop();
+            
+            console.log(winScroll);
 
-			if (winScroll > $('header').height() - 1) {
+			if (winScroll > 10) {
 
-				$('#navScroll').slideDown('slow');
+				$('.topQuote').slideDown('slow');
                  
 			} else {
 				
-				$('#navScroll').fadeOut('fast');
+				$('.topQuote').fadeOut('fast');
         
 			}
             
