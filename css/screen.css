@@ -140,25 +140,17 @@ section p {
 }
 
 h3 {
-    color: #FFF;
+    color: #10A236;
     font-family: 'quicksand-regular';
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: 100;
     letter-spacing: 1px;
     line-height: 1;
-    margin-bottom: 1em;
-    text-align: center;
+    margin-bottom: 0.5em;
     text-transform: uppercase;
 }
 
-h3::before, h3::after {
-    content: "=";
-    display: inline-block;
-    margin: 0 2em;
-    -webkit-transform: scaleX(8);
-    -moz-transform: scaleX(8);
-    transform: scaleX(8);
-}
+
 
 
 /* =NAVIGATION
@@ -209,7 +201,7 @@ header {
 
 .prev, .next {
     cursor: pointer;
-    display: block;
+    display: none;
     font-size: 10em;
     height: 100%;
     position: fixed;
@@ -248,7 +240,7 @@ header {
 }
 
 #home article {
-    padding: 20px 100px 20px calc(180px + 8%);
+    padding: 20px 20px 20px calc(180px + 8%);
 }
 
 #hdOverlay {
@@ -299,6 +291,29 @@ header {
     opacity: 0;
 }
 
+aside {
+    background: rgba(0,0,0,0.4);
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 100;
+    left: calc(180px + 6%);
+    line-height: 1.5;
+    padding: 20px;
+    position: absolute;
+    text-align: left;
+    width: 30%;
+}
+
+aside.topQuote {
+    display: none;
+    top: 20px;
+}
+
+aside.bottomQuote {
+    bottom: 20px;
+}
+
 #about a {
     font-weight: bold;
 }
@@ -326,7 +341,8 @@ header {
 /* =SOLUTIONS
 ----------------------------------------------- */
 #solutions {
-    background: brown;
+    background: url(../assets/unaltered/Proboscis%20Monkey.JPG);
+    background-size: cover;
 }
 
 
