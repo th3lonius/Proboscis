@@ -1,7 +1,5 @@
 $(document).ready(function() {
     
-
-    
     $('#splashType').bigtext()
     
 /*----- NAVIGATION -----*/
@@ -30,9 +28,11 @@ $(document).ready(function() {
         var currentSection = $('section'+location.hash);
         
         var dest = $(currentSection).next().offset().left;
+        
+        window.location.hash = href.hash;
                         
         console.log(dest);
-        console.log(location.hash);
+        console.log(window.location);
         
         $("html,body").animate({
             scrollLeft: dest
