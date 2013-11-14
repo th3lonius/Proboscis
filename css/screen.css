@@ -178,6 +178,7 @@ header {
     display: block;
     font-family: 'quicksand-regular';
     font-size: 1em;
+    letter-spacing: 1px;
     padding: 10px 0 10px 20px;
     text-transform: uppercase;
 }
@@ -250,23 +251,15 @@ header {
 
 /* =SPLASHTYPE
 ----------------------------------------------- */
-#splashType {
+#bigText {
     color: #FFF;
-    display: block;
     line-height: 1;
     margin: 0 auto;
-    padding: 2em calc(180px + 6%);
-    text-align: left;
-    text-transform: uppercase;
-    width: 100%;
-    z-index: 100;
-}
-
-#splashType em, .lightText, .logText {
     text-align: justify;
+    width: 80%;
 }
 
-#splashType em {
+#bigText div:first-child {
     display: block;
     font-family: 'amatic-bold';
 }
@@ -293,6 +286,7 @@ header {
 
 aside {
     background: rgba(0,0,0,0.4);
+    border-radius: 10px;
     color: #FFF;
     font-size: 1.5em;
     font-style: italic;
@@ -326,6 +320,25 @@ aside.bottomQuote {
     color: rgba(239,108,68,1);
 }
 
+footer {
+    margin-top: 1em;
+    position: relative;
+}
+
+footer a {
+    color: rgba(0,0,0,0.4) !important;
+    display: block;
+    font-size: 0.7em;
+    font-weight: 100;
+    margin-bottom: 1em;
+}
+
+footer a::before {
+    content: "^";
+    position: absolute;
+    left: -10px;
+}
+
 
 /* =PRECAUTIONS
 ----------------------------------------------- */
@@ -341,7 +354,7 @@ aside.bottomQuote {
 /* =SOLUTIONS
 ----------------------------------------------- */
 #solutions {
-    background: url(../assets/unaltered/Proboscis%20Monkey.JPG);
+    background: url(../img/proboscis_tree.jpg);
     background-size: cover;
 }
 

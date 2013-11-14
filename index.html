@@ -22,6 +22,7 @@
 <!-- Other scripts -->
     <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/bigtext.js"></script>
     <script type="text/javascript" src="js/jquery.color.js"></script>
 </head> 
 
@@ -53,11 +54,11 @@
                     
             <div id="hdOverlay">
 
-                    <div id="splashType">
-                        <em>Over the last 40 years</em>
-                        <span class="lightText">our populations have plummeted,</span>
-                        <span class="logText">logging destroys our sleeping trees,</span>
-                        <span class="lightText">and poachers mine our guts for rare stones</span>
+                    <div id="bigText">
+                        <div>Over the last 40 years</div>
+                        <div class="lightText">our populations have plummeted,</div>
+                        <div class="logText">logging destroys our sleeping trees,</div>
+                        <div class="lightText">and poachers mine our guts for rare stones</div>
                     </div>
 
             </div>
@@ -97,8 +98,10 @@ Ecology[edit]</p>
                         
                     </ul>
                     
-                    <a href="http://www.iucnredlist.org/details/14352/0">Meijaard, E., Nijman, V. &amp; Supriatna, J. (2008). Nasalis larvatus. In: IUCN 2008. IUCN Red List of Threatened Species. Retrieved 4 January 2009.</a>
-                    <a href="http://pin.primate.wisc.edu/factsheets/entry/proboscis_monkey/taxon">Primate Factsheets: Proboscis monkey (Nasalis larvatus) Taxonomy, Morphology, & Ecology. Pin.primate.wisc.edu. Retrieved on 2012-08-21.</a>
+                    <footer>                    
+                        <a href="http://www.iucnredlist.org/details/14352/0">Meijaard, E., Nijman, V. &amp; Supriatna, J. (2008). Nasalis larvatus. In: IUCN 2008. IUCN Red List of Threatened Species. Retrieved 4 January 2009.</a>
+                        <a href="http://pin.primate.wisc.edu/factsheets/entry/proboscis_monkey/taxon">Primate Factsheets: Proboscis monkey (Nasalis larvatus) Taxonomy, Morphology, & Ecology. Pin.primate.wisc.edu. Retrieved on 2012-08-21.</a>
+                    </footer>
                                             
                 </article>
                     
@@ -151,8 +154,12 @@ Decrease of 1000 monkeys
         
     </div><!-- /container -->
     
-    <script src="js/bigtext.js">$('#splashType').bigtext()</script>
-    
+       <script>
+        var bt = BigText.noConflict(true);
+        $.fn.bt = bt.jQueryMethod;
+
+        $('#bigText').bt();
+        </script>
     <!-- (ʃ) -->
 </body>
 </html>
